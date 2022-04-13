@@ -13,7 +13,7 @@ function Services (){
     <div className="row   mx-auto" >
         <div className="card m-2 ">
             <div className="card-content">
-                <div className="card-body"> <Image className="img" src="https://via.placeholder.com/150C/O https://placeholder.com/"  alt='placeholder'/>
+                <div className="card-body"> <Image className="img" src="https://via.placeholder.com/150C/O https://placeholder.com/"  alt='placeholder' width={500} height={500}/>
                     <div className="shadow"></div>
                     <div className="card-title text-black"> Parties Trays</div>
                     <div className="card-subtitle">
@@ -24,7 +24,7 @@ function Services (){
         </div>
         <div className="card m-2 ">
             <div className="card-content">
-                <div className="card-body"> <Image className="img" src="https://via.placeholder.com/150C/O https://placeholder.com/" alt='placeholder' />
+                <div className="card-body"> <Image className="img" src="https://via.placeholder.com/150C/O https://placeholder.com/" alt='placeholder' width={500} height={500} />
                     <div className="card-title text-black"> Delivery </div>
                     <div className="card-subtitle">
                         <p> <small className="text-muted"> Consequat tempor proident elit velit ut velit culpa incididunt ea voluptate ullamco nostrud ea ullamco. Exercitation irure dolor mollit ex aute Lorem excepteur in id nulla occaecat et sint. Occaecat eiusmod ad mollit ea dolor. Ad aliqua exercitation fugiat consequat. </small> </p>
@@ -34,7 +34,7 @@ function Services (){
         </div>
         <div className="card m-2">
             <div className="card-content">
-                <div className="card-body"> <Image className="img rck" src='https://via.placeholder.com/150C/O https://placeholder.com/' alt='placeholder' />
+                <div className="card-body"> <Image className="img rck" src='https://via.placeholder.com/150C/O https://placeholder.com/' alt='placeholder' width={500} height={500} />
                     <div className="card-title text-black"> Ad nostrud mollit </div>
                     <div className="card-subtitle">
                         <p> <small className="text-muted">Nulla culpa qui deserunt pariatur occaecat dolore consectetur ad excepteur. Pariatur esse sit ut labore. Occaecat quis culpa dolor mollit est. Mollit commodo id elit commodo ad tempor sunt magna </small> </p>

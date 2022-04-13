@@ -110,9 +110,9 @@ const Contact = () => {
                     <li>
                     <p>Social Media</p>
        <div  className="medias d-flex  justify-content-evenly">
-       <a  className="btn btn-danger" href="https://www.instagram.com/gigis_shoppp/" target='blank'><FaInstagram/></a>
-     <a className="btn btn-primary" href="https://www.facebook.com/gigis_shoppp-102649194937712/" target='blank'><FaFacebookF/></a>
-    <a className="btn btn-dark" href="https://www.tiktok.com/@gigis_shoppp" target='blank'><FaTiktok/></a>
+       <Link  className="btn btn-danger" href="https://www.instagram.com/gigis_shoppp/" target='blank'><FaInstagram/></Link>
+     <Link className="btn btn-primary" href="https://www.facebook.com/gigis_shoppp-102649194937712/" target='blank'><FaFacebookF/></Link>
+    <Link className="btn btn-dark" href="https://www.tiktok.com/@gigis_shoppp" target='blank'><FaTiktok/></Link>
          </div>             
     
          

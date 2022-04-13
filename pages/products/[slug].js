@@ -2,7 +2,6 @@ import { createClient } from 'contentful'
 import Image from 'next/image'
 import Link  from 'next/link'
 import Head  from 'next/head'
-import Loading from '../../components/loading'
 
 
 const client = createClient({
@@ -49,8 +48,7 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export default function ProductCard ({product}){
-  if (!product) return  <Loading/>
-
+  if (!product) return  <div> not found</div>
   const {title,price,images}= product.fields
 
     return(
@@ -70,8 +68,8 @@ export default function ProductCard ({product}){
           <p>Pariatur ad cillum voluptate tempor quis sit commodo minim. Consectetur dolor voluptate sunt proident eiusmod anim minim commodo sint. Nulla proident Lorem nisi labore anim ullamco quis aliqua minim dolor ex.</p>
         </div>
         <div className="product-price ">
-          <span className='text-success'>$9999</span>
-          <Link  href="/products"><a className='btn'>Go back</a></Link>
+          <span className='text-success'>{price}</span>
+          <Link  href="/products" className="btn" >Go back</Link>
         </div>
       </div>
   <style>

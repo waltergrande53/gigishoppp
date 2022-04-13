@@ -8,41 +8,34 @@ import productStyles from '../styles/Products.module.css'
 import ProductsCard from "../components/ProductCard"
 import Head from "next/head"
 import Contact from "./contact"
-import { Link } from "next/link";
+import  Link from "next/link";
 
-export async function getStaticProps(){
-  const client = createClient ({
-     space:process.env.SPACE,
-     accessToken:process.env.KEY,})
 
-  const res =await client.getEntries({content_type: "products"})
 
-  return {
-   props: {
-     products: res.items,
-   },
-   revalidate: 1
- }
-}
+
+
+
+
+
+
+
+
 
 const images = [
   {
     url: 'https://gigiweb.vercel.app/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fwyaorns2fubd%2F1Wb5wzL2k0ErHAIgMXf5AM%2F53d773c90727c879917c8b755f0a0383%2F272083013_418976226638339_599324316727787874_n.jpg&w=640&q=75',
     title: 'See Our Products',
-    width: "100%",
+    width: "100%"
   
   }
 ];
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 500,
-
+  height: 600,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
     height: 100,
-  
-
   },
   '&:hover, &.Mui-focusVisible': {
     zIndex: 1,
@@ -52,10 +45,9 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
     '& .MuiImageMarked-root': {
       opacity: 0,
     },
-   
-  },
-  '.MuiTypography-root': {
-    border: '4px solid currentColor',
+    '& .MuiTypography-root': {
+      border: '4px solid currentColor',
+    },
   },
 }));
 
@@ -66,7 +58,7 @@ const ImageSrc = styled('span')({
   top: 0,
   bottom: 0,
   backgroundSize: 'cover',
-  backgroundPosition: 'center ',
+  backgroundPosition: 'center 40%',
 });
 
 const Image = styled('span')(({ theme }) => ({
@@ -93,8 +85,32 @@ const ImageBackdrop = styled('span')(({ theme }) => ({
 }));
 
 const ImageMarked = styled('span')(({ theme }) => ({
+  height: 3,
+  width: 18,
+  backgroundColor: theme.palette.common.white,
+  position: 'absolute',
+  bottom: -2,
+  left: 'calc(50% - 9px)',
   transition: theme.transitions.create('opacity'),
-}));
+}))
+
+
+export async function getStaticProps(){
+  const client = createClient ({
+     space:process.env.SPACE,
+     accessToken:process.env.KEY,})
+
+  const res =await client.getEntries({content_type: "products"})
+
+  return {
+   props: {
+     products: res.items,
+   },
+   revalidate: 1
+ }
+}
+
+;
 export default function Home ({products}){
 
  return (
@@ -104,7 +120,7 @@ export default function Home ({products}){
         <title>Home</title>
       </Head>
   
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 600, width: '100%', height:'100%' }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', height:'100%' }}>
       {images.map((image) => (
         <ImageButton
         
@@ -114,7 +130,7 @@ export default function Home ({products}){
             
             width: image.width,
           }}
-          href='#products'
+          passhref='#products'
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />

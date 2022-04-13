@@ -1,10 +1,8 @@
-import * as React from 'react';
 import Stack from '@mui/material/Stack';
 import Skeleton from '@mui/material/Skeleton';
 import Grid from '@mui/material/Grid';
-import { Box } from '@mui/system';
 
-export default function Loading() {
+ function Loading() {
   return (
     
    <Grid  sx={{
@@ -22,3 +20,4 @@ export default function Loading() {
    </Grid>
   );
 }
+export default Loading;

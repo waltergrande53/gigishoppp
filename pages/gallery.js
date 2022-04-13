@@ -1,4 +1,4 @@
-import { createClient } from "contentful"
+import  {createClient} from "contentful"
 
 import productStyles from'../styles/Products.module.css'
 import GalleryCard from "../components/GalleryCard"
@@ -17,11 +17,9 @@ import GalleryCard from "../components/GalleryCard"
       revalidate: 1
     }
   }
-export default function Gallery ({products}){
+function Gallery ({products}){
 
  return (
-    <>
-  
   <section className={productStyles.products} >
         <div className={productStyles.section_title}>
           <h2 id="products">Our Gallery</h2>
@@ -34,6 +32,7 @@ export default function Gallery ({products}){
           ))}
           </div>
       </section>
-  </>
+
   )
 }
+export default Gallery;

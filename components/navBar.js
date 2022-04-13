@@ -11,8 +11,9 @@ return(
        <label htmlFor='checkbox_toggle' className={navStyles.hamburger}>&#9776;</label>
        <div className={navStyles.menu}>
       <Link href="/"><a><li>Home</li></a></Link>
-      <Link href="/gallery"><a><li> Gallery</li></a></Link>
-         <Link href="/services"><a><li>Services</li></a></Link>
+      <Link href="/gallery"><a><li>Gallery</li></a></Link>
+       
+        <Link href="/services"><a><li>Services</li></a></Link>
          <Link href="/products"><a><li>Products</li></a></Link>
          <Link href="/contact"><a><li>Contact</li></a></Link>
        </div>

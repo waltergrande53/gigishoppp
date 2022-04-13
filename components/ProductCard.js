@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from "next/link"
 function ProductsCard({product}){
     const {title,price,images,id,size,slug}= product.fields
     return(
