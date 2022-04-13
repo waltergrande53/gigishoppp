@@ -130,7 +130,7 @@ export default function Home ({products}){
             
             width: image.width,
           }}
-          passhref='#products'
+          passHref='#products'
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
