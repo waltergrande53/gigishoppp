@@ -1,6 +1,6 @@
 import { createClient } from "contentful"
 import ProductsCard from "../components/ProductCard"
-import productStyles from'../styles/products.module.css'
+import productStyles from '../styles/products.module.css'
 import Head from 'next/head'
 import { useState } from "react"
 
