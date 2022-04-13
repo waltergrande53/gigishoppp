@@ -1,6 +1,6 @@
 import  {createClient} from "contentful"
 
-import productStyles from'../styles/Products.module.css'
+import productStyles from'../styles/products.module.css'
 import GalleryCard from "../components/GalleryCard"
 
  export async function getStaticProps(){

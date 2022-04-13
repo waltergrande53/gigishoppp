@@ -4,7 +4,7 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
-import productStyles from '../styles/Products.module.css'
+import productStyles from '../styles/products.module.css'
 import ProductsCard from "../components/ProductCard"
 import Head from "next/head"
 import Contact from "./contact"
