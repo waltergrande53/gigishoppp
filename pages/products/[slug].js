@@ -2,6 +2,7 @@ import { createClient } from 'contentful'
 import Image from 'next/image'
 import Link  from 'next/link'
 import Head  from 'next/head'
+import { Button } from '@mui/material'
 
 
 const client = createClient({
@@ -68,8 +69,8 @@ export default function ProductCard ({product}){
           <p>Pariatur ad cillum voluptate tempor quis sit commodo minim. Consectetur dolor voluptate sunt proident eiusmod anim minim commodo sint. Nulla proident Lorem nisi labore anim ullamco quis aliqua minim dolor ex.</p>
         </div>
         <div className="product-price ">
-          <span className='text-success'>{price}</span>
-          <Link  href="/products" className="btn" >Go back</Link>
+          <h3 className='text-success'> Price ${price}</h3> <br/>
+          <Link  href="/products" passHref ><Button variant="contained"> Go Back</Button></Link>
         </div>
       </div>
   <style>

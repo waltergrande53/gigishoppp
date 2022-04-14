@@ -1,7 +1,9 @@
 import {FaTiktok,FaFacebookF,FaInstagram,FaMapMarker} from 'react-icons/fa';
 import { useForm, ValidationError } from '@formspree/react';
 import Link from 'next/link';
-
+import TextField from '@mui/material/TextField';
+import Box from '@mui/material/Box';
+import { autocompleteClasses } from '@mui/material';
 const Contact = () => {
   const [state, handleSubmit] = useForm("mwkyvbyd");
   if (state.succeeded) {
@@ -17,11 +19,9 @@ const Contact = () => {
       </div>)
   }
     return (  
-    <>
-   <main>
 
-
-<div className="container-fluid   " >
+   <Box  mt={2} sx={{ p: 2, width: 600, margin:'auto'}}>
+<div >
   <div className="row">   
     <div className="col-md-">
       <div className="card ">
@@ -39,7 +39,7 @@ const Contact = () => {
                       <div className="col-md-6">
                         <div className="md-form">
                           <label hrmlfor="contact-name" className="name">Your name</label>
-                          <input type="text" required 
+                          <TextField type="text" required fullWidth 
                           id="contact-name" name='name'
                        className="form-control"/>
                         
@@ -49,9 +49,9 @@ const Contact = () => {
                       <div className="col-md-6">
                         <div className="md-form">
                           <label htmlFor="contact-email" className="" name='email'>Your email</label>
-                          <input type="email" required id="contact-email" className="form-control" >
+                          <TextField type="email" required id="contact-email" className="form-control" fullWidth >
                         
-                        </input>
+                        </TextField>
               <ValidationError 
         prefix="Email" 
         field="email"
@@ -65,7 +65,7 @@ const Contact = () => {
                       <div className="col-md-12">
                         <div className="md-form">
                           <label htmlFor="contact-Subject">Subject</label>
-                          <input type="text" required  
+                          <TextField type="text" required  fullWidth
                           name='Subject' id="subject" className="form-control" />
                          <ValidationError 
         prefix="Subject" 
@@ -82,8 +82,8 @@ const Contact = () => {
 
                         <div className="md-form">
                           <label htmlFor="contact-message" >Your message</label>
-                          <textarea type="text" required 
-                          name='massage'  id="contact-message" className="md-textarea form-control" rows="3"></textarea>
+                          <TextField type="text" required fullWidth
+                          name='massage'  id="contact-message" className="md-textarea form-control" rows="3"></TextField>
                             <ValidationError 
         prefix="Message" 
         field="message"
@@ -110,9 +110,9 @@ const Contact = () => {
                     <li>
                     <p>Social Media</p>
        <div  className="medias d-flex  justify-content-evenly">
-       <Link  className="btn btn-danger" href="https://www.instagram.com/gigis_shoppp/" target='blank'><FaInstagram/></Link>
-     <Link className="btn btn-primary" href="https://www.facebook.com/gigis_shoppp-102649194937712/" target='blank'><FaFacebookF/></Link>
-    <Link className="btn btn-dark" href="https://www.tiktok.com/@gigis_shoppp" target='blank'><FaTiktok/></Link>
+       <Link  className="btn btn-danger" href="https://www.instagram.com/gigis_shoppp/"  passHref target='_blank'><FaInstagram/></Link>
+     <Link className="btn btn-primary" href="https://www.facebook.com/gigis_shoppp-102649194937712/"  passHref target='_blank'><FaFacebookF/></Link>
+    <Link className="btn btn-dark" href="https://www.tiktok.com/@gigis_shoppp"  passHref target='_blank'><FaTiktok/></Link>
          </div>             
     
          
@@ -133,8 +133,6 @@ const Contact = () => {
   </div>
 
 </div>
-
-</main>
 <style>
     {`
     .center{
@@ -151,7 +149,9 @@ const Contact = () => {
     `}
 </style>
 
-    </>)
+</Box>
+    )
+
 }
  
 export default Contact;
