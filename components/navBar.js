@@ -51,7 +51,8 @@ return(
         component="div"
         sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
       >
-       GIGI&apos;S SHOPPP
+       <Link href={'/'}>
+         <span>GIGI&apos;S SHOPPP </span></Link> 
       </Typography>
 
       <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -97,7 +98,9 @@ return(
         component="div"
         sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
       >
-             GIGI&apos;S SHOPPP
+  
+    <Link  href={'/'}><span>GIGI&apos;S SHOPPP </span></Link> 
+       
       </Typography>
       <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
         {pages.map((page) => (

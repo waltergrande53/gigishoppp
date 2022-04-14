@@ -1,8 +1,10 @@
 import { createClient } from 'contentful'
 import Image from 'next/image'
 import Link  from 'next/link'
+
 import Head  from 'next/head'
 import { Button } from '@mui/material'
+import { green } from '@mui/material/colors';
 
 
 const client = createClient({
@@ -69,8 +71,15 @@ export default function ProductCard ({product}){
           <p>Pariatur ad cillum voluptate tempor quis sit commodo minim. Consectetur dolor voluptate sunt proident eiusmod anim minim commodo sint. Nulla proident Lorem nisi labore anim ullamco quis aliqua minim dolor ex.</p>
         </div>
         <div className="product-price ">
-          <h3 className='text-success'> Price ${price}</h3> <br/>
-          <Link  href="/products" passHref ><Button variant="contained"> Go Back</Button></Link>
+          <Button variant='contained' color='success'> Price ${price}</Button> <br/>
+        
+          <Button variant='contained' color='success' 
+          style={{textDecoration:'none', underline:'none'}}
+         
+          >  
+           <Link href="/products" passHref > Go Back </Link></Button>
+        
+       
         </div>
       </div>
   <style>

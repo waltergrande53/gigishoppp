@@ -15,7 +15,7 @@ function ProductsCard({product}){
           </button></a>
         </div>
           <h3>{title}</h3>
-        <h4>$9999</h4>
+        <h4>${price}</h4>
     <style jsx>{`
   .product{
     

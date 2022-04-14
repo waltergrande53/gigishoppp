@@ -20,8 +20,8 @@ const Contact = () => {
   }
     return (  
 
-   <Box  mt={2} sx={{ p: 2, width: 600, margin:'auto'}}>
-<div >
+   <Box   sx={{ p: 2, width: 600, margin:'auto'}}>
+<div className='container'>
   <div className="row">   
     <div className="col-md-">
       <div className="card ">
