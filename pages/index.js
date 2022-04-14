@@ -32,10 +32,10 @@ const images = [
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 700,
+  height: 300,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
-    height: 700,
+    height: 100,
   },
   '&:hover, &.Mui-focusVisible': {
     zIndex: 1,
@@ -120,7 +120,7 @@ export default function Home ({products}){
         <title>Home</title>
       </Head>
   
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 700, width: '100%', height:700 }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', height:700 }}>
       {images.map((image) => (
         <ImageButton
         
