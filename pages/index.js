@@ -7,18 +7,7 @@ import Typography from '@mui/material/Typography';
 import productStyles from '../styles/products.module.css'
 import ProductsCard from "../components/ProductCard"
 import Head from "next/head"
-import Contact from "./contact"
 import  Link from "next/link";
-
-
-
-
-
-
-
-
-
-
 
 
 const images = [
@@ -32,7 +21,7 @@ const images = [
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 700,
+  height: 300,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
     height: 400,
