@@ -30,7 +30,6 @@ function ProductsCard({product}){
     max-width: 1170px;
     display: grid;
     
-    
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-column-gap: 1.5rem;
     grid-row-gap: 2rem;

@@ -1,5 +1,6 @@
-import Image from 'next/image'
+
 import * as React from 'react';
+
 import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
@@ -11,8 +12,10 @@ import Typography from '@mui/material/Typography';
 import {
   EmailShareButton,
   EmailIcon,
-  FacebookMessengerShareButton,
-  FacebookMessengerIcon
+  FacebookIcon,
+  FacebookShareButton,
+  WhatsappShareButton,
+  WhatsappIcon,
 }
    from 'next-share';
 
@@ -21,18 +24,19 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
-function GalleryCard({product}){
+function GalleryCard({product}){  
+  const {title,price,images,id,size,slug}= product.fields
+ 
   const [open, setOpen] = React.useState(false);
 
-  const handleClickOpen = () => {
+  const handleClickOpen = (e) => {
     setOpen(true);
   };
 
   const handleClose = () => {
     setOpen(false);
   };
-    const {title,price,images,id,size,slug}= product.fields
-    return(
+      return(
         <article className="product">
         <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -66,31 +70,30 @@ function GalleryCard({product}){
         </DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-    
+          <FacebookShareButton
+  url={"https://gigishoppp.vercel.app/products/" + slug}
 
-         < FacebookMessengerShareButton
-  url={"https://gigiweb.vercel.app/products/" + slug}
-  appId={''}
 >
-  <FacebookMessengerIcon size={32} round />
-</FacebookMessengerShareButton>
-
+  <FacebookIcon size={32} round />
+</FacebookShareButton>
+<WhatsappShareButton
+        url={"https://gigishoppp.vercel.app/products/" + slug}
+          separator=":: "
+      >
+        <WhatsappIcon size={32} round />
+      </WhatsappShareButton>
 <EmailShareButton
-  url={"https://gigiweb.vercel.app/products/" + slug}
+  url={"https://gigishoppp.vercel.app/products/" + slug}
   title={'Next Share'}
 >
   <EmailIcon size={32} round />
 </EmailShareButton>
 
-
-
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel </Button>
-          <Button onClick={handleClose} autoFocus>
-         Share
-          </Button>
+        
         </DialogActions>
       </Dialog>
           

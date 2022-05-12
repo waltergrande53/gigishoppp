@@ -4,8 +4,6 @@ import Link  from 'next/link'
 
 import Head  from 'next/head'
 import { Button } from '@mui/material'
-import { green } from '@mui/material/colors';
-
 
 const client = createClient({
     space:process.env.SPACE,
@@ -60,28 +58,21 @@ export default function ProductCard ({product}){
       <main className="container">
   <Head><title>{title}</title></Head>
       <div className="left-column rounded">
-      <Image  className="img rounded " src={'https:' + images.fields.file.url}
+      <Image  className="img rounded" src={'https:' + images.fields.file.url}
            width ='500px'    
            height ='500px' alt='product'   ></Image>
       </div>
       
       <div className="right-column">
         <div className="product-description"> 
-          <h1 className='text-danger'>{title}</h1>
+          <h1 className='text-danger '>{title}</h1>
           <p>Pariatur ad cillum voluptate tempor quis sit commodo minim. Consectetur dolor voluptate sunt proident eiusmod anim minim commodo sint. Nulla proident Lorem nisi labore anim ullamco quis aliqua minim dolor ex.</p>
         </div>
-        <div className="product-price ">
-          <Button variant='contained' color='success'> Price ${price}</Button> <br/>
-        
-          <Button variant='contained' color='success' 
-          style={{textDecoration:'none', underline:'none'}}
-         
-          >  
-           <Link href="/products" passHref > Go Back </Link></Button>
-        
-       
-        </div>
+    <div className='price'
+  > Price ${price}   <li><Link href='/products' className="right-column"><Button  color='success' variant='contained'> Go Back</Button></Link></li></div>
+
       </div>
+    
   <style>
     {`
     .container {
@@ -134,15 +125,18 @@ export default function ProductCard ({product}){
       color: #86939E;
       line-height: 24px;
     }
-    .product-price {
+    .price {
       display: flex;
       align-items: center;
+      justify-content:space-evenly;
+      
     }
     
-    .product-price span {
+    .price, li{
+      list-style-type: none;
       font-size: 26px;
-      font-weight: 300;
-      color: #43474D;
+      font-weight: bold;
+      color: #b01700;
       margin-right: 20px;
     } 
     .btn {
@@ -155,9 +149,7 @@ export default function ProductCard ({product}){
       padding: 12px 30px;
       transition: all .5s;
     }
-    .cart-btn:hover {
-      background-color: #64af3d;
-    }
+  
     @media (max-width: 940px) {
       .container {
         flex-direction: column;

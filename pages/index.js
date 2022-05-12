@@ -21,9 +21,10 @@ const images = [
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: 'relative',
-  height: 300,
-  [theme.breakpoints.down('sm')]: {
-    width: '100% !important', // Overrides inline-style
+  width:400,
+  height: 800,
+  [theme.breakpoints.down('lg')]: {
+    width:200, // Overrides inline-style
     height: 400,
   },
   '&:hover, &.Mui-focusVisible': {
@@ -47,7 +48,7 @@ const ImageSrc = styled('span')({
   top: 0,
   bottom: 0,
   backgroundSize: 'cover',
-  backgroundPosition: 'center 40%',
+  backgroundPosition: 'center 65% ',
 });
 
 const Image = styled('span')(({ theme }) => ({
@@ -109,7 +110,7 @@ export default function Home ({products}){
         <title>Home</title>
       </Head>
   
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%', }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 250, width: '100%', }}>
       {images.map((image) => (
         <ImageButton
         
@@ -119,7 +120,7 @@ export default function Home ({products}){
             
             width: image.width,
           }}
-          href='#products'  passHref
+          href='#products'  passhref
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
